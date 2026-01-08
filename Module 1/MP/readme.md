@@ -58,11 +58,6 @@ The program uses **functions** to modularize operations and enforce reusability.
 
 ---
 
-### **Code Implementation**
-Refer to the code provided earlier in the response.
-
----
-
 ### **Test Cases**
 #### **Case 1: Check Availability**
 - **Input**: Room type = "Single"
@@ -163,11 +158,6 @@ The program uses **functions** to handle each operation and ensures proper valid
 
 5. **Exit**:
    - Terminates the program.
-
----
-
-### **Code Implementation**
-Refer to the code provided earlier in the response.
 
 ---
 
