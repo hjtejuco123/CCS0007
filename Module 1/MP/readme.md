@@ -269,11 +269,6 @@ Combine the hotel booking system and banking system into a hybrid system where u
 
 ---
 
-### **Code Implementation**
-Refer to the code provided earlier in the response.
-
----
-
 ### **Test Cases**
 #### **Case 1: Book Room and Pay**
 - **Input**: Room type = "Suite", Nights = 2, Initial balance = $1000.00
