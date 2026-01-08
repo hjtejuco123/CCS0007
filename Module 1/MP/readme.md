@@ -20,6 +20,96 @@ The program uses **functions** to modularize operations and enforce reusability.
 4. **View Booking Details**: Display the booking details, including room type, duration, and total cost.
 5. **Exit**: Exit the program.
 
+---
+
+### **Input/Output Behavior**
+- **Inputs**:
+  - Room type (`Single`, `Double`, `Suite`).
+  - Number of nights (integer).
+- **Outputs**:
+  - Availability status.
+  - Booking confirmation with cost.
+  - Total cost calculation.
+  - Detailed booking information.
+
+---
+
+### **Functionality**
+1. **Check Availability**:
+   - The program checks if the specified room type is valid (`Single`, `Double`, `Suite`) and assumes all rooms are available.
+   - If invalid, it displays an error message.
+
+2. **Book Room**:
+   - The user specifies the room type and number of nights.
+   - The program calculates the cost based on predefined rates:
+     - Single: $100 per night.
+     - Double: $150 per night.
+     - Suite: $250 per night.
+   - It updates the total cost and stores the booking details.
+
+3. **Calculate Cost**:
+   - Displays the total cost of the stay so far.
+
+4. **View Booking Details**:
+   - Displays the room type, number of nights, and total cost.
+
+5. **Exit**:
+   - Terminates the program.
+
+---
+
+### **Code Implementation**
+Refer to the code provided earlier in the response.
+
+---
+
+### **Test Cases**
+#### **Case 1: Check Availability**
+- **Input**: Room type = "Single"
+- **Expected Output**: 
+  ```
+  Room type Single is available.
+  ```
+
+#### **Case 2: Book a Room**
+- **Input**: Room type = "Double", Nights = 3
+- **Expected Output**:
+  ```
+  Booked Double room for 3 nights. Cost: $450.00
+  ```
+
+#### **Case 3: Calculate Cost**
+- **Input**: Total cost after booking = $450.00
+- **Expected Output**:
+  ```
+  Total cost so far: $450.00
+  ```
+
+#### **Case 4: View Booking Details**
+- **Input**: Room type = "Double", Nights = 3, Total cost = $450.00
+- **Expected Output**:
+  ```
+  === Booking Details ===
+  Room Type: Double
+  Number of Nights: 3
+  Total Cost: $450.00
+  ```
+
+#### **Case 5: Invalid Room Type**
+- **Input**: Room type = "Penthouse"
+- **Expected Output**:
+  ```
+  Room type Penthouse is not available.
+  ```
+
+#### **Case 6: Exit**
+- **Input**: Choice = 5
+- **Expected Output**:
+  ```
+  Exiting program...
+  ```
+
+---
 
 ## **Problem 2: Banking System**
 
@@ -44,6 +134,89 @@ The program uses **functions** to handle each operation and ensures proper valid
 
 ---
 
+### **Input/Output Behavior**
+- **Inputs**:
+  - Amount to deposit or withdraw (double).
+  - Interest rate (default = 5%).
+- **Outputs**:
+  - Updated balance after deposit/withdrawal.
+  - Current balance.
+  - New balance after applying interest.
+
+---
+
+### **Functionality**
+1. **Deposit Money**:
+   - Adds the specified amount to the account balance.
+   - Displays the new balance.
+
+2. **Withdraw Money**:
+   - Subtracts the specified amount from the account balance.
+   - Ensures the withdrawal does not exceed the available balance (error handling).
+
+3. **Check Balance**:
+   - Displays the current account balance.
+
+4. **Apply Interest**:
+   - Applies a default interest rate of 5% to the account balance.
+   - Calculates and adds the interest to the balance.
+
+5. **Exit**:
+   - Terminates the program.
+
+---
+
+### **Code Implementation**
+Refer to the code provided earlier in the response.
+
+---
+
+### **Test Cases**
+#### **Case 1: Deposit Money**
+- **Input**: Amount to deposit = $200.00, Initial balance = $0.00
+- **Expected Output**:
+  ```
+  Deposited $200.00. New balance: $200.00
+  ```
+
+#### **Case 2: Withdraw Money**
+- **Input**: Amount to withdraw = $50.00, Current balance = $200.00
+- **Expected Output**:
+  ```
+  Withdrew $50.00. New balance: $150.00
+  ```
+
+#### **Case 3: Insufficient Funds**
+- **Input**: Amount to withdraw = $300.00, Current balance = $150.00
+- **Expected Output**:
+  ```
+  Insufficient funds! Cannot withdraw $300.00
+  ```
+
+#### **Case 4: Check Balance**
+- **Input**: Current balance = $150.00
+- **Expected Output**:
+  ```
+  Current balance: $150.00
+  ```
+
+#### **Case 5: Apply Interest**
+- **Input**: Current balance = $150.00, Default interest rate = 5%
+- **Expected Output**:
+  ```
+  Applied 5.00% interest. Interest added: $7.50
+  Interest applied! New balance: $157.50
+  ```
+
+#### **Case 6: Exit**
+- **Input**: Choice = 5
+- **Expected Output**:
+  ```
+  Exiting program...
+  ```
+
+---
+
 ## **Problem 3: Hotel-Banking Hybrid System**
 
 ### **Objective**
@@ -63,110 +236,45 @@ Combine the hotel booking system and banking system into a hybrid system where u
 
 ---
 
-## **Problem 1: Hotel Room Booking System**
+### **Input/Output Behavior**
+- **Inputs**:
+  - Room type (`Single`, `Double`, `Suite`).
+  - Number of nights (integer).
+  - Bank account balance (initially $1000.00).
+- **Outputs**:
+  - Booking confirmation with cost deduction.
+  - Remaining balance after payment.
+  - Detailed booking and payment information.
 
-### **Test Cases**
-
-#### **Case 1: Check Availability**
-- **Input**: Room type = "Single"
-- **Expected Output**: 
-  ```
-  Room type Single is available.
-  ```
-    
-#### **Case 2: Book a Room**
-- **Input**: Room type = "Double", Nights = 3
-- **Expected Output**:
-  ```
-  Booked Double room for 3 nights. Cost: $450.00
-  ```
-    
-#### **Case 3: Calculate Cost**
-- **Input**: Total cost after booking = $450.00
-- **Expected Output**:
-  ```
-  Total cost so far: $450.00
-  ```
-    
-#### **Case 4: View Booking Details**
-- **Input**: Room type = "Double", Nights = 3, Total cost = $450.00
-- **Expected Output**:
-  ```
-  === Booking Details ===
-  Room Type: Double
-  Number of Nights: 3
-  Total Cost: $450.00
-  ```
-    
-#### **Case 5: Invalid Room Type**
-- **Input**: Room type = "Penthouse"
-- **Expected Output**:
-  ```
-  Room type Penthouse is not available.
-  ```
-    
-#### **Case 6: Exit**
-- **Input**: Choice = 5
-- **Expected Output**:
-  ```
-  Exiting program...
-  ```
-    
 ---
 
-## **Problem 2: Banking System**
+### **Functionality**
+1. **Book Room and Pay**:
+   - The user specifies the room type and number of nights.
+   - The program calculates the cost based on predefined rates:
+     - Single: $100 per night.
+     - Double: $150 per night.
+     - Suite: $250 per night.
+   - Deducts the cost from the bank account balance.
+   - Ensures sufficient funds before booking (error handling).
 
-### **Test Cases**
+2. **Check Balance**:
+   - Displays the remaining balance in the bank account.
 
-#### **Case 1: Deposit Money**
-- **Input**: Amount to deposit = $200.00, Initial balance = $0.00
-- **Expected Output**:
-  ```
-  Deposited $200.00. New balance: $200.00
-  ```
-    
-#### **Case 2: Withdraw Money**
-- **Input**: Amount to withdraw = $50.00, Current balance = $200.00
-- **Expected Output**:
-  ```
-  Withdrew $50.00. New balance: $150.00
-  ```
-    
-#### **Case 3: Insufficient Funds**
-- **Input**: Amount to withdraw = $300.00, Current balance = $150.00
-- **Expected Output**:
-  ```
-  Insufficient funds! Cannot withdraw $300.00
-  ```
-    
-#### **Case 4: Check Balance**
-- **Input**: Current balance = $150.00
-- **Expected Output**:
-  ```
-  Current balance: $150.00
-  ```
-    
-#### **Case 5: Apply Interest**
-- **Input**: Current balance = $150.00, Default interest rate = 5%
-- **Expected Output**:
-  ```
-  Applied 5.00% interest. Interest added: $7.50
-  Interest applied! New balance: $157.50
-  ```
-    
-#### **Case 6: Exit**
-- **Input**: Choice = 5
-- **Expected Output**:
-  ```
-  Exiting program...
-  ```
-    
+3. **View Booking and Payment Details**:
+   - Displays the room type, number of nights, total cost, and remaining balance.
+
+4. **Exit**:
+   - Terminates the program.
+
 ---
 
-## **Problem 3: Hotel-Banking Hybrid System**
+### **Code Implementation**
+Refer to the code provided earlier in the response.
+
+---
 
 ### **Test Cases**
-
 #### **Case 1: Book Room and Pay**
 - **Input**: Room type = "Suite", Nights = 2, Initial balance = $1000.00
 - **Expected Output**:
@@ -174,21 +282,21 @@ Combine the hotel booking system and banking system into a hybrid system where u
   Booked Suite room for 2 nights. Cost: $500.00
   Remaining balance: $500.00
   ```
-    
+
 #### **Case 2: Insufficient Funds for Booking**
 - **Input**: Room type = "Suite", Nights = 2, Initial balance = $400.00
 - **Expected Output**:
   ```
   Insufficient funds! Cannot book the room.
   ```
-    
+
 #### **Case 3: Check Balance**
 - **Input**: Current balance = $500.00
 - **Expected Output**:
   ```
   Current balance: $500.00
   ```
-    
+
 #### **Case 4: View Booking and Payment Details**
 - **Input**: Room type = "Suite", Nights = 2, Total cost = $500.00, Remaining balance = $500.00
 - **Expected Output**:
@@ -199,53 +307,19 @@ Combine the hotel booking system and banking system into a hybrid system where u
   Total Cost: $500.00
   Remaining Balance: $500.00
   ```
-    
+
 #### **Case 5: Invalid Room Type**
 - **Input**: Room type = "Penthouse", Nights = 2, Initial balance = $1000.00
 - **Expected Output**:
   ```
   Invalid room type!
   ```
-    
+
 #### **Case 6: Exit**
 - **Input**: Choice = 4
 - **Expected Output**:
   ```
   Exiting program...
   ```
-    
----
 
-### **Edge Cases**
-
-#### **Edge Case 1: Zero Nights (Hotel Problem)**
-- **Input**: Room type = "Single", Nights = 0
-- **Expected Output**:
-  ```
-  Booked Single room for 0 nights. Cost: $0.00
-  ```
-    
-#### **Edge Case 2: Zero Deposit (Banking Problem)**
-- **Input**: Amount to deposit = $0.00, Initial balance = $0.00
-- **Expected Output**:
-  ```
-  Deposited $0.00. New balance: $0.00
-  ```
-    
-#### **Edge Case 3: Zero Balance After Payment (Hybrid Problem)**
-- **Input**: Room type = "Single", Nights = 10, Initial balance = $1000.00
-- **Expected Output**:
-  ```
-  Booked Single room for 10 nights. Cost: $1000.00
-  Remaining balance: $0.00
-  ```
-    
-#### **Edge Case 4: Maximum Room Type Cost**
-- **Input**: Room type = "Suite", Nights = 10, Initial balance = $3000.00
-- **Expected Output**:
-  ```
-  Booked Suite room for 10 nights. Cost: $2500.00
-  Remaining balance: $500.00
-  ```
-    
 ---
