@@ -27,7 +27,7 @@ The program uses **functions** to modularize operations and enforce reusability.
   - Room type (`Single`, `Double`, `Suite`).
   - Number of nights (integer).
 - **Outputs**:
-  - Availability status.
+  - Availability status
   - Booking confirmation with cost.
   - Total cost calculation.
   - Detailed booking information.
